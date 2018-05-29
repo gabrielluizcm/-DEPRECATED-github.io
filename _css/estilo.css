@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body
+{
+    background-image: url(../_images/background.jpg);
+    background-color: #150738;
+}
+
+h1
+{
+    text-indent: 20px;
+    color: white;
+}
+
+h2
+{
+    text-indent: 20px;
+    color: white;
+}
+
+div#cabecalho
+{
+    font-size: 30px;
+    background-color: rgba(14, 4, 38, 0.4);
+    padding-left: 40px;
+    color: white;
+}
+
+div#cabecalho p
+{
+    text-align: center;
+    text-indent: 40px;
+}
+
+div#corpo
+{
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+    min-height: 90%;
+    min-width: 90%;
+    background-color: rgba(14, 4, 38, 0.4);
+}
