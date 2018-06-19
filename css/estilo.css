@@ -5,10 +5,13 @@
   --aboutsize: 16px;
   --abouth2: 20px;
   --topabout: 20%;
+  --scaleimage: 1;
+  --marginleft: 20px;
   --paddingtop: 10%;
   --paddingright: 35%;
   --paddingbottom: 8%;
   --paddingleft: 10%;
+  --paddingabout: 10px;
 }
 /*Base styling for all HTML pages*/
 body
@@ -188,6 +191,9 @@ div#body h3
      --paddingright: 35%;
      --paddingbottom: 8%;
      --paddingleft: 10%;
+     --scaleimage: 0.85;
+     --marginleft: 0px;
+     --paddingabout: 30px;
    }
 }
 
@@ -200,7 +206,7 @@ div#about
     color: whitesmoke;
     position: fixed;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: var(--paddingabout);
     top: var(--topabout);
     left: 65%;
     background-color: rgba(11, 1, 33, 0.6);
@@ -242,9 +248,9 @@ div#about h1
 
 div#about img
 {
-    margin-left: 20px;
+    transform: scale(var(--scaleimage));
+    margin-left: var(--marginleft);
     margin-right: -30px;
-    z-index: 1;
     float: right;
     border: 4px solid white;
     border-radius: 50%;
