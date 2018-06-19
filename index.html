@@ -3,13 +3,30 @@
 <head>
     <meta charset="utf-8"/>
     <title>Digital Art</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jscript.js"></script>
 </head>
 <body>
-    <div id="cabecalho">
+  <nav class="nav navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Gabriel Luiz</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#">Start</a></li>
+        <li><a href="#footer">Bottom</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div id="header">
     <h1><p><label title="Nice to meet you. I'm Gabriel.">はじめまして。ガブリエルです。</label></p></h1>
-    <h2><p>Site under construction! :)</p></h2>
+    <h2><p id="header">Site under construction! :)</p></h2>
         <main>
              <p>Here I will expose my <a href="https://en.wikipedia.org/wiki/Digital_art" title="Digital Art on Wikipedia" target="_blank">Digital Arts</a> as a personal project for learning HTML, CSS and JavaScript.<br/>
              <label title="Nice to meet you.">どうぞよろしく。</label></p>
@@ -30,10 +47,10 @@
             Obrigado por vir!<br/>
             来ていただきありがとうございます！</h2></p>
     </div>
-    <div id="corpo">
+    <div id="body">
         <h3>Hover the image! ;)</h3>
         <div>
-        <a href="#"><figure class="imagenscorpo">
+        <a href="#"><figure class="bodyimages">
             <img src="images/cavaco60.jpg"/ alt="">
             <figcaption>This is my favorite one, although I still don't know how to draw bodies the right way, I feel like it really describes me. I usually wear black or greyscale clothes, but I really am the funny guy of the group who plays heavier songs like Linkin Park with samba rhythm and always makes "dad jokes". Also I have more tattoos now than on the image. And more ear piercings too.</figcaption>
         </figure></a>
@@ -52,14 +69,12 @@
 
 
     </div>
-    <footer>
+    <footer id="footer">
         <p>
-            <a href="http://facebook.com/naooanjo" title="Facebook" target="_blank"><img src="images/facebook.png" alt=""/></a>
-            <a href="http://twitter.com/naooanjo" title="Twitter" target="_blank"><img src="images/twitter.png" alt=""></a>
             <a href="http://instagram.com/naooanjo" title="Instagram" target="_blank"><img src="images/instagram.png" alt=""/></a>
             <a href="https://www.linkedin.com/in/gabriel-luiz-carpes-maria-2b5616152/" title="LinkedIn" target="_blank"><img src="images/linkedin.png" alt=""/></a>
             Created by: Gabriel Luiz Carpes Maria<br/>
-            Last update: July 11th, 2018
+            Last update: July 18th, 2018
         </p>
         <p>
             Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
