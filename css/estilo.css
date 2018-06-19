@@ -5,8 +5,12 @@
   --aboutsize: 16px;
   --abouth2: 20px;
   --topabout: 20%;
+  --paddingtop: 10%;
+  --paddingright: 35%;
+  --paddingbottom: 8%;
+  --paddingleft: 10%;
 }
-
+/*Base styling for all HTML pages*/
 body
 {
     position: relative;
@@ -18,10 +22,9 @@ body
     font-family: 'Comfortaa', sans-serif;
 }
 
-
 nav.navbar
 {
-    min-height: 80px;
+    min-height: 75px;
     background-color: #361e6c;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
@@ -94,6 +97,8 @@ div#header p
     background-color: rgba(14, 4, 38, 0.65);
     display: inline-block;
     border-radius: 5px;
+    animation-name: headerfadein;
+    animation-duration: 2s;
 }
 
 div#header p#header
@@ -106,9 +111,19 @@ div#header p#header
     rgba(0, 0, 0, 0.3) 40px,
     rgba(0, 0, 0, 0.3) 80px
   );
-  animation-name: menatwork;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  animation: menatwork 5s infinite, headerfadein 2s;
+}
+
+@keyframes headerfadein
+{
+    0%
+    {
+      opacity: 0;
+    }
+    100%
+    {
+      opacity: 1;
+    }
 }
 
 @keyframes menatwork {
@@ -126,7 +141,6 @@ div#header p#header
     }
 }
 
-
 div#body
 {
     border-radius: 5px;
@@ -139,6 +153,23 @@ div#body
     text-align: justify;
     width: 60%;
     background-color: rgba(14, 4, 38, 0.65);
+    animation: bodyfadein 4s;
+}
+
+@keyframes bodyfadein
+{
+    0%
+    {
+      opacity: 0;
+    }
+    25%
+    {
+      opacity: 0;
+    }
+    50%
+    {
+      opacity: 1;
+    }
 }
 
 div#body h3
@@ -153,6 +184,10 @@ div#body h3
      --aboutsize: 12px;
      --abouth2: 16px;
      --topabout: 13%;
+     --paddingtop: 10%;
+     --paddingright: 35%;
+     --paddingbottom: 8%;
+     --paddingleft: 10%;
    }
 }
 
@@ -169,7 +204,23 @@ div#about
     top: var(--topabout);
     left: 65%;
     background-color: rgba(11, 1, 33, 0.6);
-    z-index: 0;
+    animation: aboutfadein 5s;
+}
+
+@keyframes aboutfadein
+{
+    0%
+    {
+      opacity: 0;
+    }
+    40%
+    {
+      opacity: 0;
+    }
+    60%
+    {
+      opacity: 1;
+    }
 }
 
 div#about p
@@ -217,7 +268,6 @@ figure.bodyimages img
     width: 100%;
     height: 100%;
     margin-left: -15px;
-    margin-bottom: -5px;
 }
 
 figure.bodyimages figcaption
@@ -243,13 +293,15 @@ figure.bodyimages:hover figcaption
 
 footer
 {
-    height: 100%;
+    height: 75px;
     padding-top: 5px;
     padding-right: 20px;
     color: dimgrey;
     font-size: 12px;
     text-align: right;
     background-color: rgb(14, 4, 38);
+    animation: bodyfadein 4s;
+    margin-top: 15px;
 }
 
 footer img
@@ -262,4 +314,46 @@ footer img
 footer img:hover
 {
   transform: scale(1.2);
+}
+
+/*Styling for 404 custom page*/
+footer.error
+{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 75px;
+    animation: bodyfadein 1s;
+}
+
+div#sitrep
+{
+  position: relative;
+  width: 80%;
+  padding: 10% 35% 8% 10%;
+  margin: auto;
+  margin-top: 15px;
+  border: 5px solid #140438;
+  border-radius: 5px;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 0, 0.3) 0px,
+    rgba(255, 255, 0, 0.3) 40px,
+    rgba(0, 0, 0, 0.3) 40px,
+    rgba(0, 0, 0, 0.3) 80px
+  );
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  text-indent: 15px;
+  animation: bodyfadein 2s;
+}
+
+div#sitrep img
+{
+  position: absolute;
+  border: 5px solid #140438;
+  border-radius: 50%;
+  float: right;
+  transform: scale(0.6);
 }
