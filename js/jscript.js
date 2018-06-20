@@ -1,17 +1,25 @@
+//reduces height of nav bar when scrolling down
 $(window).scroll(function()
 {
   if ($(document).scrollTop() > 50)
   {
     $('nav').addClass('shrink');
-    $('a').addClass('shrink')
+    $('a').addClass('shrink');
+    $('button').addClass('btn-sm');
   }
   else
   {
     $('nav').removeClass('shrink');
     $('a').removeClass('shrink');
+    $('button').removeClass('btn-sm');
   }
 }
 );
+
+//makes scrolling from nav anchor links smooth
+$(function(){
+    $('.selectpicker').selectpicker();
+});
 
 $(document).ready(function(){
   // Add smooth scrolling to all links
