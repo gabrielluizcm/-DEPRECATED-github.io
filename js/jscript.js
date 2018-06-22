@@ -5,22 +5,18 @@ $(window).scroll(function()
   {
     $('nav').addClass('shrink');
     $('a').addClass('shrink');
-    $('button').addClass('btn-sm');
+    $('button').removeClass('btn-lg');
   }
   else
   {
     $('nav').removeClass('shrink');
     $('a').removeClass('shrink');
-    $('button').removeClass('btn-sm');
+    $('button').addClass('btn-lg');
   }
 }
 );
 
 //makes scrolling from nav anchor links smooth
-$(function(){
-    $('.selectpicker').selectpicker();
-});
-
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -42,3 +38,31 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+//Modal div for how I draw
+//Code from https://www.w3schools.com/howto/howto_css_modals.asp
+// Get the modal
+var modal = document.getElementById('modalHow');
+
+// Get the button that opens the modal
+var btn = document.getElementById("how");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

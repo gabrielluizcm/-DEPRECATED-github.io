@@ -12,6 +12,10 @@
   --paddingbottom: 8%;
   --paddingleft: 10%;
   --paddingabout: 10px;
+  --marginwacom: -2em;
+  --heightsitre: 480px;
+  --topsitrep: 0px;
+  --fontsizesitrep: 20px;
 }
 /*Base styling for all HTML pages*/
 body
@@ -40,6 +44,131 @@ nav.navbar.shrink
     padding-top: 0px;
     min-height: 35px;
     font-size: 16px;
+}
+
+button#how {
+  background-color: #140438;
+  color: #c64500;
+  margin-left: 3em;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+button#how:hover {
+  background-color: #4a3381;
+  color: #f66111;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+button.btn
+{
+  margin-top: 10px;
+}
+
+button.btn-lg
+{
+  margin-top: 0px;
+}
+
+/* The Modal (background) */
+.modal
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modalContent
+{
+    background-color: #140438;
+    position: relative;
+    margin: 10em auto;
+    padding: 0;
+    border: 1px solid #361e6c;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    min-height: 350px;
+}
+
+/* Add Animation */
+@keyframes animatetop
+{
+    from {top: -300px;opacity: 0;}
+    to {top: 0;opacity: 1;}
+}
+
+/* The Close Button */
+.close
+{
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modalHeader
+{
+    padding: 2px 16px;
+    background-color: #4a3381;
+    color: white;
+}
+
+/* Modal Body */
+.modalBody
+{
+  padding: 1em 2em 1em 2em;
+  color: white;
+  font-size: 18px;
+}
+
+.modalBody img
+{
+  margin-top: var(--marginwacom);
+  height: 100%;
+  position: relative;
+  float: right;
+  display: block;
+  border: 4px solid #2b0d99;
+  border-radius: 50%;
+  box-shadow: 1px 1px 4px #1b0766;
+}
+
+@media (max-width: 1024px)
+{
+  :root
+  {
+    --marginwacom: 0em;
+    --topsitrep: 30px;
+    --heightsitrep: 450px;
+    --fontsizesitrep: 16px;
+  }
 }
 
 a.navbar-brand
@@ -322,7 +451,7 @@ footer img:hover
   transform: scale(1.2);
 }
 
-/*Styling for 404 custom page*/
+/*Styling for 404 custom page and contact.php*/
 footer.error
 {
     position: fixed;
@@ -332,15 +461,27 @@ footer.error
     animation: bodyfadein 1s;
 }
 
-div#sitrep
+div.sitrep
 {
+  top: var(--topsitrep);
+  height: var(--heightsitrep);
   position: relative;
   width: 80%;
-  padding: 10% 35% 8% 10%;
+  padding: 8% 35% 8% 10%;
   margin: auto;
   margin-top: 15px;
   border: 5px solid #140438;
   border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+  font-size: var(--fontsizesitrep);
+  text-indent: 15px;
+  animation: bodyfadein 2s;
+}
+
+div.sitrep#notfound
+{
   background: repeating-linear-gradient(
     135deg,
     rgba(255, 255, 0, 0.3) 0px,
@@ -348,18 +489,83 @@ div#sitrep
     rgba(0, 0, 0, 0.3) 40px,
     rgba(0, 0, 0, 0.3) 80px
   );
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  text-indent: 15px;
-  animation: bodyfadein 2s;
 }
 
-div#sitrep img
+div.sitrep img
 {
+  margin-left: 30px;
   position: absolute;
   border: 5px solid #140438;
   border-radius: 50%;
   float: right;
   transform: scale(0.6);
+}
+
+/*Styling for contact.php*/
+#retornoPHP
+{
+  position: absolute;
+  right: 5%;
+  top: 70%;
+}
+
+div.sitrep#email
+{
+  margin: auto;
+  margin-top: 15px;
+  width: 80%;
+  position: relative;
+  text-align: justify;
+  padding: 1em 2em 1em 2em;
+}
+
+label.emailForm
+{
+  padding-left: 15px;
+  display: block;
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+#email img
+{
+  transform: scale(0.7);
+  position: absolute;
+  right: 0;
+}
+
+#email input
+{
+  border-radius: 5px;
+  border: 2px solid #4a3381;
+  margin-left: 30px;
+  width: 500px;
+  color: black;
+}
+
+#email textarea
+{
+  color: black;
+  width: 500px;
+  border-radius: 5px;
+  border: 2px solid #4a3381;
+  margin-left: 30px;
+  overflow-y: auto;
+  resize: none;
+}
+
+#fsubmit
+{
+  background-color: #140438;
+}
+
+#fsubmit:hover
+{
+  background-color: #4a3381;
+}
+
+#email input:focus, #email input:hover, #email textarea:focus, #email textarea:hover
+{
+  border: 2px solid purple;
+  border-radius: 5px;
 }

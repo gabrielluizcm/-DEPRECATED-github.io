@@ -7,24 +7,21 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/jscript.js"></script>
 </head>
 <body>
   <nav class="nav navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="http://github.com/gabrielluizcm" target="_blank" title="Visit my GitHub!">Gabriel Luiz</a>
+        <a class="navbar-brand" href="index.html">Gabriel Luiz</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="nav-item"><a href="index.html">Home</a></li>
         <li class="nav-item"><a href="#top">Top</a></li>
         <li class="nav-item"><a href="#pseudobody">Body</a></li>
         <li class="nav-item"><a href="#footer">Bottom</a></li>
       </ul>
+      <button id="how" class="btn btn-lg">How I draw</button>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.php">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -51,10 +48,24 @@
             Obrigado por vir!<br/>
             来ていただきありがとうございます！</h2></p>
     </div>
+    <div id="modalHow" class="modal">
+      <div class="modalContent">
+        <div class="modalHeader">
+          <span class="close">&times;</span>
+          <h2>How I draw</h2>
+        </div>
+        <div class="modalBody">
+          <p>I draw using a Small <a href="https://www.wacom.com/pt-br/products/one-by-wacom" target="_blank">Wacom One</a> for hardware.</p>
+          <a href="https://pt.aliexpress.com/item/One-by-Wacom-CTL-471-Graphic-Drawing-Digital-Tablet-1024-Pressure-Levels/32823817854.html" target="_blank"><img src="images/wacom.jpg" alt="Picture of a person drawing on an tablet" title="Image from Amazon @ https://pt.aliexpress.com/item/One-by-Wacom-CTL-471-Graphic-Drawing-Digital-Tablet-1024-Pressure-Levels/32823817854.html"/></a>
+          <p>As for software, the older drawings were made on <a href="https://www.systemax.jp/en/sai/" target="_blank">Paint Tool Sai</a>, but now I am migrating to <a href="https://krita.org/" target="_blank">Krita</a>.</p>
+          <p>The main reasons are that Krita is a free program, and compatible with Windows, MacOS and Linux. As I'm mainly working on Ubuntu right now, I needed an editor that runs on it.</p>
+        </div>
+      </div>
+    </div>
     <div id="body">
         <h3>Hover the image! ;)</h3>
         <div>
-        <a href="#"><figure class="bodyimages">
+        <a href="cavaco.html"><figure class="bodyimages">
             <img src="images/cavaco60.jpg" alt=""/>
             <figcaption>This is my favorite one, although I still don't know how to draw bodies the right way, I feel like it really describes me. I usually wear black or greyscale clothes, but I really am the funny guy of the group who plays heavier songs like Linkin Park with samba rhythm and always makes "dad jokes". Also I have more tattoos now than on the image. And more ear piercings too.</figcaption>
         </figure></a>
@@ -73,6 +84,9 @@
 
 
     </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jscript.js"></script>
 </body>
 <footer id="footer">
     <p>
@@ -80,7 +94,7 @@
         <a href="https://github.com/gabrielluizcm" target="_blank" title="GitHub"><img src="images/github.png" alt=""/></a>
         <a href="https://www.linkedin.com/in/gabriel-luiz-carpes-maria-2b5616152/" title="LinkedIn" target="_blank"><img src="images/linkedin.png" alt=""/></a>
         Created by: Gabriel Luiz Carpes Maria<br/>
-        Last update: July 20th, 2018
+        Last update: July 21th, 2018
     </p>
     <p>
         Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
