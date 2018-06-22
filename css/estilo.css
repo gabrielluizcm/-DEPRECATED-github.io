@@ -14,8 +14,8 @@
   --paddingabout: 10px;
   --marginwacom: -2em;
   --heightsitre: 480px;
-  --topsitrep: 0px;
   --fontsizesitrep: 20px;
+  --rightimage: 0px;
 }
 /*Base styling for all HTML pages*/
 body
@@ -165,9 +165,9 @@ button.btn-lg
   :root
   {
     --marginwacom: 0em;
-    --topsitrep: 30px;
     --heightsitrep: 450px;
     --fontsizesitrep: 16px;
+    --rightimage: -50px;
   }
 }
 
@@ -463,7 +463,7 @@ footer.error
 
 div.sitrep
 {
-  top: var(--topsitrep);
+  top: 0;
   height: var(--heightsitrep);
   position: relative;
   width: 80%;
@@ -502,13 +502,6 @@ div.sitrep img
 }
 
 /*Styling for contact.php*/
-#retornoPHP
-{
-  position: absolute;
-  right: 5%;
-  top: 70%;
-}
-
 div.sitrep#email
 {
   margin: auto;
@@ -517,55 +510,16 @@ div.sitrep#email
   position: relative;
   text-align: justify;
   padding: 1em 2em 1em 2em;
+  min-height: 650px;
 }
-
-label.emailForm
+#form
 {
-  padding-left: 15px;
-  display: block;
-  line-height: 20px;
-  margin-top: 20px;
+  width: 50%;
 }
 
 #email img
 {
   transform: scale(0.7);
   position: absolute;
-  right: 0;
-}
-
-#email input
-{
-  border-radius: 5px;
-  border: 2px solid #4a3381;
-  margin-left: 30px;
-  width: 500px;
-  color: black;
-}
-
-#email textarea
-{
-  color: black;
-  width: 500px;
-  border-radius: 5px;
-  border: 2px solid #4a3381;
-  margin-left: 30px;
-  overflow-y: auto;
-  resize: none;
-}
-
-#fsubmit
-{
-  background-color: #140438;
-}
-
-#fsubmit:hover
-{
-  background-color: #4a3381;
-}
-
-#email input:focus, #email input:hover, #email textarea:focus, #email textarea:hover
-{
-  border: 2px solid purple;
-  border-radius: 5px;
+  right: var(--rightimage);
 }

@@ -41,56 +41,14 @@
     </div>
     <div class="sitrep" id="email">
       <h1>Get in contact! Send me an email:</h1>
-      <a href="https://aminoapps.com/c/otanix/page/blog/formulario-e-e-mail-de-suporte-amino/YVd2_bvSbuDP607XlGQjeMXkZPJ6DEYmb" target="_blank"><img src="images/email.gif" title="Gif from AminaApps @ https://aminoapps.com/c/otanix/page/blog/formulario-e-e-mail-de-suporte-amino/YVd2_bvSbuDP607XlGQjeMXkZPJ6DEYmb" alt="Gif of an anime girl using the computer"/></a>
-      <span id="retornoPHP">
-        <?php
-        	if (isset($_POST['submit']))
-          {
-            require_once "Mail.php";
-          	$from = 'gabrielluizcmgithub@gmail.com';
-          	$to = 'gabrielluizcm@hotmail.com';
-          	$host = "ssl://smtp.gmail.com";
-          	$port = "465";
-          	$username = 'gabrielluizcmgithub@gmail.com';
-          	$password = 'seilasenhafacil';
-          	$name = $_POST['name'];
-          	$email = $_POST['email'];
-          	$subject = $_POST['subject'];
-          	$message = $_POST['message'];
-          	$body = "Sent by $name - $email\nMessage:\n$message";
-          	$headers = array ('From' => $from, 'To' => $to,'Subject' => $subject, 'Content-Type'  => 'text/plain; charset=UTF-8');
-          	$smtp = Mail::factory('smtp',
-          		array ('host' => $host,
-          		'port' => $port,
-          		'auth' => true,
-             		'username' => $username,
-             		'password' => $password));
-            $mail = $smtp->send($to, $headers, $body);
-            if (PEAR::isError($mail)) {
-          		echo($mail->getMessage());
-          	} else {
-              header('Location: contactSuccess.php');
-          	}
-          }
-        ?>
-      </span>
-      <form id="formEmail" method="post" action="contact.php">
-        <label class="emailForm" for="fname">Name</label>
-        <input type="text" id="fname" name="name" placeholder="Your name" required/>
-        <label class="emailForm" for="femail">Email</label>
-        <input type="email" id="femail" name="email" placeholder="Your email" required/>
-        <label class="emailForm" for="fsubject">Subject</label>
-        <input type="text" id="fsubject" name="subject" placeholder="Email subject" required/>
-        <label class="emailForm" for="fmessage">Message</label>
-        <textarea id="fmessage" name="message" placeholder="Type your message here" required></textarea>
-        <input style="color: white;"id="fsubmit" name="submit" type="submit" value="Submit">
-      </form>
+      <a href="https://aminoapps.com/c/otanix/page/blog/formulario-e-e-mail-de-suporte-amino/YVd2_bvSbuDP607XlGQjeMXkZPJ6DEYmb" target="_blank"><img id="keyboard"src="images/email.gif" title="Gif from AminaApps @ https://aminoapps.com/c/otanix/page/blog/formulario-e-e-mail-de-suporte-amino/YVd2_bvSbuDP607XlGQjeMXkZPJ6DEYmb" alt="Gif of an anime girl using the computer"></a>
+      <div id="form"><script type="text/javascript" src="https://form.jotformz.com/jsform/81718262928667"></script></div>
     </div>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/jscript.js"></script>
   </body>
-  <footer id="footer" class="error">
+  <footer id="footer">
       <p>
           <a href="http://instagram.com/naooanjo" title="Instagram" target="_blank"><img src="images/instagram.png" alt=""/></a>
           <a href="https://github.com/gabrielluizcm" target="_blank" title="GitHub"><img src="images/github.png" alt=""/></a>
