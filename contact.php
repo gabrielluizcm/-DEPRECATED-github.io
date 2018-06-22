@@ -47,12 +47,12 @@
         	if (isset($_POST['submit']))
           {
             require_once "Mail.php";
-          	$from = 'gabrielluizcmgithub@gmail.com';
+          	$from = 'someemail@gmail.com';
           	$to = 'gabrielluizcm@hotmail.com';
           	$host = "ssl://smtp.gmail.com";
           	$port = "465";
-          	$username = 'gabrielluizcmgithub@gmail.com';
-          	$password = 'seilasenhafacil';
+          	$username = 'someemailb@gmail.com';
+          	$password = 'somepassword';
           	$name = $_POST['name'];
           	$email = $_POST['email'];
           	$subject = $_POST['subject'];
